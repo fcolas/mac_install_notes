@@ -45,3 +45,9 @@ read -p "Press [ENTER] once it's done..."
 # ssh keys
 echo "Copy your ssh keys in your .ssh directory"
 read -p "Press [ENTER] once it's done..."
+
+# name of computer
+echo "Setting name of the computer"
+print_and_run 'sudo scutil --set HostName sancho'
+echo "Edit your /etc/hosts file to add sancho to the localhost line"
+read -p "Press [ENTER] once it's done..."
