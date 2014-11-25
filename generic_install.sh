@@ -1,0 +1,45 @@
+#!/bin/bash
+
+function print_and_run {
+	echo $1
+	#$1
+}
+
+# first, you need to install Xcode
+echo "You need to install Xcode through the app store before anything else."
+read -p "Press [ENTER] once it's done..."
+
+# you need to run Xcode once to accept the license
+echo "Launch Xcode in order to sign the license agreement."
+read -p "Press [ENTER] once it's done..."
+
+# installing brew (package manager)
+echo "Installing the Homebrew package manager (brew):"
+print_and_run 'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+# run brew doctor once as requested by the installation
+print_and_run 'brew doctor'
+
+# install vim and macvim
+echo "Install vim and macvim"
+print_and_run 'brew install vim macvim'
+
+# install git (with gitk and stuff)
+echo "Installing newer git"
+print_and_run 'brew install git'
+
+# setting git up
+echo "Setting git up with your name and mail"
+print_and_run 'git config --global user.name "Francis Colas"'
+print_and_run 'git config --global user.mail francis.colas@inria.fr'
+
+# install pip
+echo "Installing pip"
+print_and_run 'sudo easy_install pip'
+print_and_run 'mkdir -p ~/Library/Python/2.7/lib/python/site-packages'
+print_and_run 'echo "$(brew --prefix)/lib/python2.7/site-packages" >> ~/Library/Python/2.7/lib/python/site-packages/homebrew.pth'
+
+# install XQuartz
+echo "You need to install XQuartz from https://xquartz.macosforge.org"
+read -p "Press [ENTER] once it's done..."
+
+
