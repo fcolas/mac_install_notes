@@ -42,4 +42,6 @@ print_and_run 'echo "$(brew --prefix)/lib/python2.7/site-packages" >> ~/Library/
 echo "You need to install XQuartz from https://xquartz.macosforge.org"
 read -p "Press [ENTER] once it's done..."
 
-
+# ssh keys
+echo "Copy your ssh keys in your .ssh directory"
+read -p "Press [ENTER] once it's done..."
