@@ -18,10 +18,16 @@ echo "Installing the Homebrew package manager (brew):"
 print_and_run 'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
 # run brew doctor once as requested by the installation
 print_and_run 'brew doctor'
+# shell completion
+print_and_run 'echo "# brew shell completion" >> ~/.profile'
+print_and_run 'echo "source `brew --repository`/Library/Contributions/brew_bash_completion.sh" >> ~/.profile'
 
 # install vim and macvim
 echo "Install vim and macvim"
 print_and_run 'brew install vim macvim'
+# set vim as default editor
+print_and_run 'echo "# default command line editor" >> ~/.profile'
+print_and_run 'echo "export EDITOR=/usr/local/bin/vim" >> ~/.profile'
 
 # install git (with gitk and stuff)
 echo "Installing newer git"
