@@ -30,7 +30,7 @@ print_and_run 'rosinstall_generator rviz --rosdistro hydro --wet-only --tar >> i
 # getting source
 print_and_run 'wstool init -j8 src indigo-desktop-wet.rosinstall'
 # installing dependency
-print_and_run 'rosdep install --from-paths src --ignore-src --rosdistro indigo -y'
+print_and_run 'rosdep install -r --from-paths src --ignore-src --rosdistro indigo -y'
 # prepare compilation
 echo "Remove tinyxml in src/image_common/image_transport/CMakeLists.txt"
 read -p "Press [ENTER] once it's done..."
