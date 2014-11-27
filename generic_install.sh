@@ -39,6 +39,13 @@ print_and_run 'git config --global user.name "Francis Colas"'
 print_and_run 'git config --global user.email francis.colas@inria.fr'
 print_and_run 'git config --global push.default simple'
 
+# completing bash completion
+echo "Completing bash completion"
+print_and_run 'echo "# bash completion" >> ~/.profile'
+print_and_run 'echo "if [ -f $(brew --prefix)/etc/bash_completion ]; then" >> ~/.profile'
+print_and_run 'echo "  . $(brew --prefix)/etc/bash_copmletion" >> ~/.profile'
+print_and_run 'echo "fi" >> ~/.profile'
+
 # install pip
 echo "Installing pip"
 print_and_run 'sudo easy_install pip'
