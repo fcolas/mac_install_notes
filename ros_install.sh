@@ -22,6 +22,8 @@ print_and_run 'rosdep update'
 print_and_run 'mkdir ~/ros_catkin_ws'
 print_and_run 'cd ~/ros_catkin_ws'
 print_and_run 'rosinstall_generator desktop --rosdistro indigo --deps --wet-only --tar > indigo-desktop-wet.rosinstall'
+## using hydro version of rviz since indigo version requires ogre1.8+ but not readily available
+print_and_run 'rosinstall_generator rviz --rosdistro hydro --wet-only --tar >> indigo-desktop-wet.rosinstall'
 print_and_run 'wstool init -j8 src indigo-desktop-wet.rosinstall'
 print_and_run 'rosdep install --from-paths src --ignore-src --rosdistro indigo -y'
 echo "Remove tinyxml in src/image_common/image_transport/CMakeLists.txt"
