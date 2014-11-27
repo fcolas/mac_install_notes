@@ -37,6 +37,7 @@ print_and_run 'brew install git'
 echo "Setting git up with your name and mail"
 print_and_run 'git config --global user.name "Francis Colas"'
 print_and_run 'git config --global user.email francis.colas@inria.fr'
+print_and_run 'git config --global push.default simple'
 
 # install pip
 echo "Installing pip"
