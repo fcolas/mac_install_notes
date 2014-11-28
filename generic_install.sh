@@ -71,3 +71,7 @@ echo "Install LaTeX from tug.org/mactex/"
 read -p "Press [ENTER] once it's done..."
 print_and_run 'echo "# path for latex" >> ~/.profile'
 print_and_run 'echo "export PATH=/usr/local/texlive/2014/bin:$PATH" >> ~/.profile'
+
+# iPython
+echo "Install iPython"
+print_and_run 'pip install ipython'
