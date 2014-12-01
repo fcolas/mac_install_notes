@@ -24,3 +24,9 @@ echo "Adding colour to ls output"
 print_and_run 'echo "# adding colours to ls" >> ~/.profile'
 print_and_run 'echo "export CLICOLOR=1" >> ~/.profile'
 
+# update to bash 4.x
+echo "Installing later bash"
+print_and_run 'brew install bash'
+echo "Add /usr/local/bin/bash to /etc/shells"
+read -p "Press [ENTER] once it's done..."
+print_and_run "chsh -s /usr/local/bin/bash"
