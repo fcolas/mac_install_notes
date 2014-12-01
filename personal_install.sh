@@ -30,3 +30,9 @@ print_and_run 'brew install bash'
 echo "Add /usr/local/bin/bash to /etc/shells"
 read -p "Press [ENTER] once it's done..."
 print_and_run "chsh -s /usr/local/bin/bash"
+
+# install prompt
+echo "Setting up prompt"
+print_and_run 'cp bash_prompt ~/.bash_prompt'
+print_and_run 'echo "# custom prompt" >> ~/.profile'
+print_and_run 'echo "source ~/.bash_prompt" >> ~/.profile.
