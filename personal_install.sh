@@ -36,3 +36,9 @@ echo "Setting up prompt"
 print_and_run 'cp bash_prompt ~/.bash_prompt'
 print_and_run 'echo "# custom prompt" >> ~/.profile'
 print_and_run 'echo "source ~/.bash_prompt" >> ~/.profile'
+
+# set terminal up
+echo "Change default terminal to pro"
+echo "Set shell exiting behavior to 'Close if the shell exited cleanly'"
+echo "Add home and end keys in keyboard as sending respectively \\033OH and \\033OF"
+read -p "Press [ENTER] once it's done..."
