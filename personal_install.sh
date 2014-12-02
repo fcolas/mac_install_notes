@@ -7,7 +7,7 @@ function print_and_run {
 
 # install owncloud
 echo "Install owncloud from http://owncloud.com"
-echo "Copnfigure owncloud client"
+echo "Configure owncloud client"
 read -p "Press [ENTER] once it's done..."
 
 # install keepassX
@@ -35,4 +35,4 @@ print_and_run "chsh -s /usr/local/bin/bash"
 echo "Setting up prompt"
 print_and_run 'cp bash_prompt ~/.bash_prompt'
 print_and_run 'echo "# custom prompt" >> ~/.profile'
-print_and_run 'echo "source ~/.bash_prompt" >> ~/.profile.
+print_and_run 'echo "source ~/.bash_prompt" >> ~/.profile'
