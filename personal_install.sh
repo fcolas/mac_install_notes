@@ -6,7 +6,8 @@ function print_and_run {
 }
 
 # install owncloud
-echo "Install owncloud from http://owncloud.com"
+echo "Installing owncloud"
+print_and_run 'brew cask install owncloud'
 echo "Configure owncloud client"
 read -p "Press [ENTER] once it's done..."
 
