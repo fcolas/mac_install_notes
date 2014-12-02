@@ -87,3 +87,7 @@ print_and_run 'brew cask install skype'
 # install inkscape
 echo "Installing inkscape"
 print_and_run 'brew install inkscape'
+
+# install gimp
+echo "Installing gimp"
+print_and_run 'brew cask install gimp'
