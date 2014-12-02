@@ -79,3 +79,7 @@ print_and_run 'pip install ipython'
 # install skype
 echo "Install skype from www.skype.com"
 read -p "Press [ENTER] once it's done..."
+
+# install inkscape
+echo "Installing inkscape"
+print_and_run 'brew install inkscape'
