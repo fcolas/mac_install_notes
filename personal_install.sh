@@ -11,7 +11,8 @@ echo "Configure owncloud client"
 read -p "Press [ENTER] once it's done..."
 
 # install keepassX
-echo "Install KeePassX 2.0 from www.keepassx.org"
+echo "Installing KeePassX"
+print_and_run 'brew cask install keepassx'
 echo "Open database in owncloud"
 read -p "Press [ENTER] once it's done..."
 
