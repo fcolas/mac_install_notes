@@ -57,8 +57,8 @@ print_and_run 'mkdir -p ~/Library/Python/2.7/lib/python/site-packages'
 print_and_run 'echo "$(brew --prefix)/lib/python2.7/site-packages" >> ~/Library/Python/2.7/lib/python/site-packages/homebrew.pth'
 
 # install XQuartz
-echo "You need to install XQuartz from https://xquartz.macosforge.org"
-read -p "Press [ENTER] once it's done..."
+echo "Installing XQuartz"
+print_and_run 'brew cask install xquartz'
 
 # ssh keys
 echo "Copy your ssh keys in your .ssh directory"
