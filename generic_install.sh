@@ -81,8 +81,8 @@ echo "Install iPython"
 print_and_run 'pip install ipython'
 
 # install skype
-echo "Install skype from www.skype.com"
-read -p "Press [ENTER] once it's done..."
+echo "Installing skype"
+print_and_run 'brew cask install skype'
 
 # install inkscape
 echo "Installing inkscape"
