@@ -22,6 +22,10 @@ print_and_run 'brew doctor'
 print_and_run 'echo "# brew shell completion" >> ~/.profile'
 print_and_run 'echo "source `brew --repository`/Library/Contributions/brew_bash_completion.sh" >> ~/.profile'
 
+# installing cask
+echo "Installing cask"
+print_and_run 'brew install caskroom/cask/brew-cask'
+
 # install vim and macvim
 echo "Install vim and macvim"
 print_and_run 'brew install vim macvim'
