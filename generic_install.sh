@@ -37,17 +37,11 @@ print_and_run 'echo "export EDITOR=/usr/local/bin/vim" >> ~/.profile'
 echo "Installing newer git"
 print_and_run 'brew install git'
 
-# setting git up
-echo "Setting git up with your name and mail"
-print_and_run 'git config --global user.name "Francis Colas"'
-print_and_run 'git config --global user.email francis.colas@inria.fr'
-print_and_run 'git config --global push.default simple'
-
 # completing bash completion
 echo "Completing bash completion"
 print_and_run 'echo "# bash completion" >> ~/.profile'
 print_and_run 'echo "if [ -f $(brew --prefix)/etc/bash_completion ]; then" >> ~/.profile'
-print_and_run 'echo "  . $(brew --prefix)/etc/bash_copmletion" >> ~/.profile'
+print_and_run 'echo "  . $(brew --prefix)/etc/bash_completion" >> ~/.profile'
 print_and_run 'echo "fi" >> ~/.profile'
 
 # install pip
@@ -63,12 +57,6 @@ print_and_run 'brew cask install xquartz'
 # ssh keys
 echo "Copy your ssh keys in your .ssh directory"
 read -p "Press [ENTER] once it's done..."
-
-# name of computer
-echo "Setting name of the computer"
-print_and_run 'sudo scutil --set HostName sancho'
-#echo "Edit your /etc/hosts file to add sancho to the localhost line"
-#read -p "Press [ENTER] once it's done..."
 
 # LaTeX
 echo "Installing mactex"

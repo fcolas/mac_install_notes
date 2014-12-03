@@ -5,6 +5,18 @@ function print_and_run {
 	#$1
 }
 
+# name of computer
+echo "Setting name of the computer"
+print_and_run 'sudo scutil --set HostName sancho'
+#echo "Edit your /etc/hosts file to add sancho to the localhost line"
+#read -p "Press [ENTER] once it's done..."
+
+# setting git up
+echo "Setting git up with your name and mail"
+print_and_run 'git config --global user.name "Francis Colas"'
+print_and_run 'git config --global user.email francis.colas@inria.fr'
+print_and_run 'git config --global push.default simple'
+
 # install owncloud
 echo "Installing owncloud"
 print_and_run 'brew cask install owncloud'
