@@ -45,4 +45,5 @@ print_and_run 'source ~/.ros_catkin_ws/install_isolated/setup.bash'
 echo "Permanent ROS environment settings"
 print_and_run 'echo "# ROS setup" >> ~/.profile'
 print_and_run 'echo "source ~/ros_catkin_ws/install_isolated/setup.bash" >> ~/.profile'
+print_and_run 'echo "export LC_CTYPE=en_US.UTF-8" >> ~/.profile'
 
