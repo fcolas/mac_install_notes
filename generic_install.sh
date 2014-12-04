@@ -77,3 +77,7 @@ print_and_run 'brew cask install inkscape'
 # install gimp
 echo "Installing gimp"
 print_and_run 'brew cask install gimp'
+
+# install vlc
+echo "Installing vlc"
+print_and_run 'brew cask install vlc'
