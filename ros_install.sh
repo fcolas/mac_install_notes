@@ -6,7 +6,7 @@ function print_and_run {
 }
 
 # Some dependencies are in generic
-echo "You need to have installed Xcode, brew, pip and Xquartz (cf generic_install)"
+echo "You need to have installed Xcode, brew, python from brew, pip and Xquartz (cf generic_install)"
 read -p "Press [ENTER] once it's done..."
 
 # install ROS (wiki.ros.org/indigo/Installation/OSX/Homebrew/Source)
