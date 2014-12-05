@@ -34,8 +34,6 @@ print_and_run 'rosdep install -r --from-paths src --ignore-src --rosdistro indig
 # prepare compilation
 echo "Remove tinyxml in src/image_common/image_transport/CMakeLists.txt"
 read -p "Press [ENTER] once it's done..."
-echo "Remove log4cxx (two times) in src/robot_state_publisher/CMakeLists.txt"
-read -p "Press [ENTER] once it's done..."
 echo "You may need to check https://github.com/ros-visualization/rviz/pull/825 for rviz to compile."
 read -p "Press [ENTER] once it's done..."
 # actual compilation
