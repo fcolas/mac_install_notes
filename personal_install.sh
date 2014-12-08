@@ -62,3 +62,10 @@ echo "Change default terminal to pro"
 echo "Set shell exiting behavior to 'Close if the shell exited cleanly'"
 echo "Add home and end keys in keyboard as sending respectively \\033OH and \\033OF"
 read -p "Press [ENTER] once it's done..."
+
+# python3
+echo "Installing python3"
+print_and_run 'brew install python3'
+print_and_run 'pip3 install ipython'
+print_and_run 'echo "# ipython3" >> ~/.profile'
+print_and_run 'echo "alias ipython3='\''python3 /usr/local/lib/python3.4/site-packages/IPython/terminal/ipapp.py'\''" >> ~/.profile'
