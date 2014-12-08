@@ -1,0 +1,12 @@
+## generic aliases
+# ls help
+alias l='ls'
+alias ll='ls -lF'
+alias la='ls -a'
+alias lal='ls -alF'
+# grep auto color
+alias grep='grep -color=auto'
+
+# ROS aliases
+# turtlebot 3 on shared connection
+alias ros_t3_shared='export ROS_MASTER_URI=http://192.168.2.3:11311; export ROS_IP=192.168.2.1'

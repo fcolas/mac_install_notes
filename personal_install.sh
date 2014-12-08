@@ -51,6 +51,12 @@ print_and_run 'cp bash_prompt ~/.bash_prompt'
 print_and_run 'echo "# custom prompt" >> ~/.profile'
 print_and_run 'echo "source ~/.bash_prompt" >> ~/.profile'
 
+# install aliases
+echo "Setting up aliases"
+print_and_run 'cp bash_alias ~/.bash_alias'
+print_and_run 'echo "# custom aliases" >> ~/.profile'
+print_and_run 'echo "source ~/.bash_alias" >> ~/.profile'
+
 # set terminal up
 echo "Change default terminal to pro"
 echo "Set shell exiting behavior to 'Close if the shell exited cleanly'"
