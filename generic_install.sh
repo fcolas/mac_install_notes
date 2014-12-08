@@ -44,15 +44,11 @@ print_and_run 'echo "if [ -f $(brew --prefix)/etc/bash_completion ]; then" >> ~/
 print_and_run 'echo "  . $(brew --prefix)/etc/bash_completion" >> ~/.profile'
 print_and_run 'echo "fi" >> ~/.profile'
 
-# install python
-echo "Installing python from brew"
-print_and_run 'brew install python'
-
-## install pip
-#echo "Installing pip"
-#print_and_run 'sudo easy_install pip'
-#print_and_run 'mkdir -p ~/Library/Python/2.7/lib/python/site-packages'
-#print_and_run 'echo "$(brew --prefix)/lib/python2.7/site-packages" >> ~/Library/Python/2.7/lib/python/site-packages/homebrew.pth'
+# install pip
+echo "Installing pip"
+print_and_run 'sudo easy_install pip'
+print_and_run 'mkdir -p ~/Library/Python/2.7/lib/python/site-packages'
+print_and_run 'echo "$(brew --prefix)/lib/python2.7/site-packages" >> ~/Library/Python/2.7/lib/python/site-packages/homebrew.pth'
 
 # install XQuartz
 echo "Installing XQuartz"
