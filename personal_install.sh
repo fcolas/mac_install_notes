@@ -69,3 +69,9 @@ print_and_run 'brew install python3'
 print_and_run 'pip3 install ipython'
 print_and_run 'echo "# ipython3" >> ~/.profile'
 print_and_run 'echo "alias ipython3='\''python3 /usr/local/lib/python3.4/site-packages/IPython/terminal/ipapp.py'\''" >> ~/.profile'
+
+# vim configuration
+echo "Configuring Vim"
+print_and_run 'git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim'
+print_and_run 'cp vimrc ~/.vimrc'
+print_and_run 'vim +PluginInstall +qall'
