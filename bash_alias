@@ -5,7 +5,7 @@ alias ll='ls -lF'
 alias la='ls -a'
 alias lal='ls -alF'
 # grep auto color
-alias grep='grep -color=auto'
+alias grep='grep --color=auto'
 
 # ROS aliases
 # turtlebot 3 on shared connection
