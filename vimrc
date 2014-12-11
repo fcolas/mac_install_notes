@@ -10,7 +10,7 @@ set nocompatible
 	" let Vundle manage Vundle, required
 	Plugin 'gmarik/Vundle.vim'
 	" colors
-	Plugin 'altercation/vim-colors-solarized'
+	"Plugin 'altercation/vim-colors-solarized'
 	" open files
 	Plugin 'kien/ctrlp.vim'
 	" commenting
@@ -28,8 +28,9 @@ set nocompatible
 "}
 
 " colors
-let g:solarized_termcolors=256
-color solarized
+"let g:solarized_termcolors=256
+"color solarized
+color desert
 set background=dark
 
 " syntax highlighting

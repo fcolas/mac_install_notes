@@ -1,6 +1,3 @@
-# github token for homebrew
-export HOMEBREW_GITHUB_API_TOKEN=3dab7996412c13ec9f4943c8e97c7ffa069c4ae4
-
 # add colours to ls
 export CLICOLOR=1
 
