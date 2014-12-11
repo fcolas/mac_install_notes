@@ -28,9 +28,9 @@ set nocompatible
 "}
 
 " colors
-set background=dark
 let g:solarized_termcolors=256
 color solarized
+set background=dark
 
 " syntax highlighting
 syntax on
