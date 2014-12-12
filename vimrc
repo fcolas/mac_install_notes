@@ -42,6 +42,8 @@ set spell
 " search
 set incsearch	" find as you type
 set hlsearch	" highlight search terms
+set ignorecase  " ignore case in search
+set smartcase   " unless there is some case
 
 " fold
 set foldenable
@@ -52,6 +54,13 @@ set shiftwidth=4	" indents are 4 spaces
 set tabstop=4	" tabs are at 4 spaces
 set softtabstop=4	"  backspace indents
 set expandtab	" tabs are actually spaces
+
+" ui
+set ruler   " always show cursor position
+set number  " show line number
+set linebreak   " wrap at word
+set splitright  " split right with vsplit
+set splitbelow  " splitbelow with split
 
 " key mappings
 " <leader> key
