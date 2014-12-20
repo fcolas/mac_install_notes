@@ -36,6 +36,11 @@ read -p "Press [ENTER] once it's done..."
 echo -e $Action"Install AdBlockPlus for Safari (Safari->Safari Extensions)"$Off
 read -p "Press [ENTER] once it's done..."
 
+# install Firefox
+echo -e $Info"Installing Firefox"$Off
+print_and_run 'brew cask install firefox'
+echo -e $Action"Install AdBlockPlus for Firefox (Firefox->Tools->Addons)"$Off
+
 # add colours to ls
 echo -e $Info"Adding colour to ls output"$Off
 print_and_run 'echo "# adding colours to ls" >> ~/.profile'
