@@ -78,3 +78,19 @@ echo -e $Info"Configuring Vim"$Off
 print_and_run 'git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim'
 print_and_run 'cp vimrc ~/.vimrc'
 print_and_run 'vim +PluginInstall +qall'
+
+# open terminal with shortcut
+echo -e $Info"Adding shortcut to open new terminal window"$Off
+echo -e $Action"Open Automator.app and create a new service"$Off
+echo -e $Action"Set service to receive no input, add action to Run Applescript with:"$Off
+echo 'on run {input, parameters}
+	
+	(* Your script goes here *)
+	tell application "Terminal"
+		activate
+		do script ""
+	end tell
+	
+end run'
+echo -e $Action"Save service"$Off
+echo -e $Action"Add shortcut in System Preferences/Keyboard/Shortcuts/Services/General"$Off
