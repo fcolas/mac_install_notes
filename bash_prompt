@@ -86,6 +86,7 @@ if [ $? -eq 0 ]; then \
     # not clean
     echo "'$Red'"$(__git_ps1 "[%s]");\
   fi)'$Color_Off'"; \
-fi)''$(if [ -d .svn ]; then \
+fi)''$(svn info &>/dev/null;\
+if [ $? -eq 0 ]; then \
   echo "'$Blue[svn]$Color_Off'";\
 fi)'"\$ "
