@@ -99,3 +99,22 @@ echo 'on run {input, parameters}
 end run'
 echo -e $Action"Save service"$Off
 echo -e $Action"Add shortcut in System Preferences/Keyboard/Shortcuts/Services/General"$Off
+
+# open browser windows with shortcut
+echo -e $Info"Adding shortcuts to open new browser window"$Off
+echo -e $Action"Open Automator.app and create a new service"$Off
+echo -e $Action"Set service to receive no input, add action to Run Applescript with:"$Off
+echo 'on run {input, parameters}
+	tell application id "org.mozilla.firefox" to activate
+	delay 0.5
+	tell application "System Events" to keystroke "p" using {shift down, command down}
+end run'
+echo -e $Action"Save service"$Off
+echo -e $Action"Add shortcut in System Preferences/Keyboard/Shortcuts/Services/General"$Off
+
+echo -e $Action"Repeat with:"$Off
+echo 'on run {input, parameters}
+	tell application id "org.mozilla.firefox" to activate
+	delay 0.5
+	tell application "System Events" to keystroke "n" using command down
+end run'
