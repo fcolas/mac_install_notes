@@ -27,11 +27,12 @@ set nocompatible
 	filetype plugin indent on    " required
 "}
 
-" colors
+" colors and font
 "let g:solarized_termcolors=256
 "color solarized
 color desert
 set background=dark
+set guifont=Menlo:h13,Monospace
 
 " syntax highlighting
 syntax on
