@@ -89,5 +89,9 @@ nnoremap <silent> <leader>ge :Gedit<CR>
 nnoremap <silent> <leader>gi :Git add -p<CR>
 nnoremap <silent> <leader>ga :Git add .<CR>
 
+" utilities
+"save and make
+nnoremap <silent> <leader>mk :w<CR>:make<CR>
+
 " disable rope in python-mode
 let g:pymode_rope = 0
