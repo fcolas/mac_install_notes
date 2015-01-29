@@ -1,0 +1,11 @@
+If python is installed with brew (for instance as a dependency) but you want to stick to the system python, you might run into trouble with easy_install and pip
+
+Remove brew python:
+$ brew uninstall python
+
+Reinstall distribute (for easy_install):
+$ wget http://python-distribute.org/distribute_setup.py
+$ sudo python distribute_setup.py
+
+Reinstall pip:
+$ sudo easy_install pip
