@@ -93,7 +93,7 @@ nnoremap <silent> <leader>ga :Git add .<CR>
 "save and make
 nnoremap <silent> <leader>mk :w<CR>:make<CR>
 "close windows
-nnoremap <silent> <leader>wc :close
+nnoremap <silent> <leader>wc :close<CR>
 
 " disable rope in python-mode
 let g:pymode_rope = 0
