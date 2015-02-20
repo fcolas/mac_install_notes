@@ -19,7 +19,7 @@ print_and_run 'sudo dpkg -i gitlab_7.7.2-omnibus.5.4.2.ci-1_amd64.deb'
 print_and_run 'sudo gitlab-ctl reconfigure'
 
 # LDAP integration
-echo -e $Action"Activate and setup LDAP by editing /etc/gitlab/gitlab.rb"$Off
+echo -e $Action"Activate and setup LDAP by editing /etc/gitlab/gitlab.rb:"$Off
 echo "gitlab_rails['ldap_enabled'] = true"
 echo "    host: 'ildap.inria.fr'"
 echo "    uid: 'inriaLogin'"
@@ -34,8 +34,8 @@ echo -e $Action"Configure port forwarding on NAT interface of virtual machine:"$
 echo "gitlab; TCP; ; 8080; 192.168.56.102; 80"
 echo "ssh; TCP; ; 2222; 192.168.56.102; 22"
 read -p "Press [ENTER] when it's done"
-echo -e $Action"Change url and ssh port by editing /etc/gitlab/gitlab.rb"$Off
-echo "external_url 'http://sancho:8080'"
+echo -e $Action"Change ssh port by editing /etc/gitlab/gitlab.rb:"$Off
+echo "external_url 'http://sancho:80'"
 echo "..."
 echo "gitlab_rails['gitlab_shell_ssh_port'] = 2222"
 read -p "Press [ENTER] when it's done"
