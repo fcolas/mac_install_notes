@@ -23,5 +23,23 @@ echo -e $Action"Run new virtual machine to install ubuntu with OpenSSH."$Off
 read -p "Press [ENTER] once it's done..."
 
 # basic setup
-echo -e $Action"copy .ssh directory and .bash_prompt to new home."$Off
+echo -e $Action"Copy .ssh directory and .bash_prompt to new home."$Off
 read -p "Press [ENTER] once it's done..."
+
+# install guest additions
+echo -e $Action"Mount guest additions image (menu Devices/Insert Guest Additions CD image)"$Off
+read -p "Press [ENTER] once it's done..."
+echo -e $Action"Run in the VM the following commands:"$Off
+echo "sudo apt-get install build-essential module-assistant"
+echo "sudo m-a prepare"
+echo "cd /media/cdrom/ && ls"
+read -p "Press [ENTER] to continue..."
+echo -e $Action"If guest additions are not mounted, mount it manually:"$Off
+echo "cd /media"
+echo "sudo mount /dev/sr0 cdrom"
+echo "cd cdrom"
+read -p "Press [ENTER] when ready"
+echo "sudo ./VBoxLinuxAdditions.run"
+echo "sudo reboot"
+read -p "Press [ENTER] to continue..."
+
