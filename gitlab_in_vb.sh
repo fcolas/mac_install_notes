@@ -30,13 +30,13 @@ read -p "Press [ENTER] when it's done"
 print_and_run 'sudo gitlab-ctl reconfigure'
 
 # redirection
-echo -e $Action"Configure port forwarding on NAT interface of virtual machine:"$Off
-echo "gitlab; TCP; ; 8080; 192.168.56.102; 80"
-echo "ssh; TCP; ; 2222; 192.168.56.102; 22"
-read -p "Press [ENTER] when it's done"
 echo -e $Action"Change ssh port by editing /etc/gitlab/gitlab.rb:"$Off
-echo "external_url 'http://sancho:80'"
+echo "external_url 'http://sancho:8080'"
 echo "..."
 echo "gitlab_rails['gitlab_shell_ssh_port'] = 2222"
 read -p "Press [ENTER] when it's done"
 print_and_run 'sudo gitlab-ctl reconfigure'
+echo -e $Action"Configure port forwarding on NAT interface of virtual machine:"$Off
+echo "gitlab; TCP; ; 8080; 192.168.56.102; 8080"
+echo "ssh; TCP; ; 2222; 192.168.56.102; 22"
+read -p "Press [ENTER] when it's done"
