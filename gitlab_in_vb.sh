@@ -34,6 +34,8 @@ echo -e $Action"Change ssh port by editing /etc/gitlab/gitlab.rb:"$Off
 echo "external_url 'http://sancho:8080'"
 echo "..."
 echo "gitlab_rails['gitlab_shell_ssh_port'] = 2222"
+echo "..."
+echo "unicorn['port'] = 8888"
 read -p "Press [ENTER] when it's done"
 print_and_run 'sudo gitlab-ctl reconfigure'
 echo -e $Action"Configure port forwarding on NAT interface of virtual machine:"$Off
