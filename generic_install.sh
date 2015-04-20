@@ -42,6 +42,7 @@ print_and_run 'brew install git'
 
 # completing bash completion
 echo -e $Info"Completing bash completion"$Off
+print_and_run 'brew install bash-completion'
 print_and_run 'echo "# bash completion" >> ~/.profile'
 print_and_run 'echo "if [ -f $(brew --prefix)/etc/bash_completion ]; then" >> ~/.profile'
 print_and_run 'echo "  . $(brew --prefix)/etc/bash_completion" >> ~/.profile'
