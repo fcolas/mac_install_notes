@@ -2,7 +2,7 @@
 
 function print_and_run {
 	echo "$ "$1
-	$1
+	bash -c "$1"
 }
 Off="\033[0m"
 Info="\033[1;34m"
