@@ -42,6 +42,11 @@ print_and_run 'brew cask install firefox'
 echo -e $Action"Install AdBlockPlus for Firefox (Firefox->Tools->Addons)"$Off
 echo -e $Action"Install French dictionary for Firefox (Firefox->Tools->Addons)"$Off
 echo -e $Action"Install British dictionary for Firefox (Firefox->Tools->Addons)"$Off
+echo -e $Action"Install Zotero for Firefox by going to https://www.zotero.org/downloads"$Off
+
+# install Zotero standalone
+echo -e $Info"Installing Zotero"$Off
+print_and_run 'brew cask install zotero'
 
 # add colours to ls
 echo -e $Info"Adding colour to ls output"$Off
