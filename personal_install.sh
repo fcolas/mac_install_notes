@@ -125,3 +125,10 @@ echo 'on run {input, parameters}
 	delay 0.5
 	tell application "System Events" to keystroke "n" using command down
 end run'
+
+# install java+zimbra desktop
+echo -e $Info"Installing Java"$Off
+print_and_run 'brew cask install java'
+echo -e $Action"Manually install zimbra desktop application from:"$Off
+echo -e $Action"https://www.zimbra.com/downloads/zimbra-desktop"$Off
+
