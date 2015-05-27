@@ -21,6 +21,9 @@ set nocompatible
 	Plugin 'klen/python-mode'
 	" git integration
 	Plugin 'tpope/vim-fugitive'
+    " latex
+    Plugin 'LaTeX-Box-Team/LaTeX-Box'
+    "Plugin 'vim-latex/vim-latex'
 
 	" All of your Plugins must be added before the following line
 	call vundle#end()            " required
