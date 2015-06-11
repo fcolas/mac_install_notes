@@ -40,6 +40,9 @@ set guifont=Menlo:h13,Monospace
 " syntax highlighting
 syntax on
 
+" default for .tex is LaTeX
+let g:tex_flavor="latex"
+
 " spell checking
 set spell
 
