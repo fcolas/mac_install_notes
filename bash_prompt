@@ -78,7 +78,7 @@ PROMPT_DIRTRIM=3
 # adding branch and git status
 export PS1="$Purple\u@\h:$Color_Off\w"'$(git branch &>/dev/null;\
 if [ $? -eq 0 ]; then \
-  echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
+  echo "$(echo `git status 2>/dev/null` | grep "nothing to commit" > /dev/null 2>&1; \
   if [ "$?" -eq "0" ]; then \
     # clean
     echo "'$Green'"$(__git_ps1 "[%s]");\
